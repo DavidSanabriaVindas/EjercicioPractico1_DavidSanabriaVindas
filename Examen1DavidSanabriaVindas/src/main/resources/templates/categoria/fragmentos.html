@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TechShop</title>
+    </head>
+    <body>
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light text-center">
+            <div class="container">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarCategoria">
+                    <i class="fas fa-plus"></i> [[#{categoria.agregar}]]
+                </button>
+            </div>
+        </section>
+
+        <section th:fragment="agregarCategoria">
+            <div id="agregarCategoria" class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title">[[#{categoria.agregar}]]</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form th:action="@{/categoria/guardar}" method="POST" class="p-3">
+                            <div class="mb-3">
+                                <label>[[#{categoria.descripcion}]]</label>
+                                <input type="text" class="form-control" name="descripcion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>[[#{categoria.activo}]]</label>
+                                <input type="checkbox" name="activo">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
