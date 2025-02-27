@@ -29,12 +29,45 @@
                                 <td>[[${medicamento.descripcion}]]</td>
                                 <td>[[${medicamento.precio}]]</td>
                                 <td>[[${medicamento.stock}]]</td>
-                                
+
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
-    </body>
-</html>
+
+        <section th:fragment="formulario" class="container mt-4">
+            <section id="contenido">
+                <h2 style="text-align: center;">Ejemplo de formulario</h2>
+                <form action="#">
+                    <label>Nombre: </label><input type="text" name="nombre" placeholder="Ingrese su nombre"><br>
+                            <label>Email: </label><input type="email" name="email" placeholder="Ingrese su correo electrónico"><br>
+                                    <label>Teléfono: </label><input type="tel" name="telefono" placeholder="Ingrese su número de teléfono"><br>
+                                            <label>Asunto: </label><input type="text" name="asunto" placeholder="Motivo del mensaje"><br>
+                                                    <label>Mensaje: </label><input type="text" name="mensaje" placeholder="Escriba su queja o pregunta"><br>
+                                                            <label>Preferencia de contacto: </label>
+
+                                                            <label>Aceptar términos: </label><input type="checkbox" name="terminos"> Acepto los términos y condiciones<br>
+                                                                    <input type="submit" value="Enviar"><br>
+                                                                            <input type="reset" value="Borrar"><br>
+                                                                                    </form>
+                                                                                    </section>
+                                                                                    </section>
+
+                                                                                    <section th:fragment="video" class="container mt-4">
+                                                                                        <article class="text-center"> <!-- Esto centra el contenido -->
+                                                                                            <header>
+                                                                                                <h1 style="text-align: center;">Video de Youtube sobre si tomar paracetamol o ibuprofeno</h1>
+                                                                                            </header>
+                                                                                            <div class="d-flex justify-content-center">
+                                                                                                <iframe width="923" height="519" src="https://www.youtube.com/embed/B3lklTZwHW8" 
+                                                                                                        title="¿Por qué los DOCTORES usan tanto el PARACETAMOL?| DrPoloGuerrero" 
+                                                                                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                                                                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                                                            </div>
+                                                                                        </article>
+                                                                                    </section>
+
+                                                                                    </body>
+                                                                                    </html>

@@ -39,6 +39,17 @@ public class FarmaciaController {
         //Retorna el nombre de la vista "medicamentos/listado".
         return "categoria/listado"; 
     }
+    
+    @GetMapping("/formulario")
+    public String formulario() {
+        return "categoria/formulario";
+    }
 
+    @GetMapping("/video")
+    public String video() {
+        return "categoria/video";
+    }
+
+   
 }
 
