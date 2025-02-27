@@ -1,15 +1,65 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <link rel="stylesheet" th:href="@{/css/estilos.css}">    
+            <title>Examen</title>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace="~{layout/plantilla :: header}" class="header-centrado">
+            <h1 class="texto-centrado">Examen</h1>
+        </header>
+
+        <main class="contenedor sombra nuevo-estilo">
+            <h4 class="titulo">Ve los medicamentos</h4>
+            <br/>
+            <br/>
+
+            <div class="Servicios">
+                <section class="servicio">
+                    <a class="boton" th:href="@{/medicamentos/listado}">
+                        <h3>Consultar</h3>
+                    </a>
+                </section>
+
+            </div>
+            
+        </main>
+        <br>
+        <h1 style="text-align: center;">Sobre nosotros:</h1>
+        <h4>En Farmacia Farmacia Examen, nos dedicamos a ofrecer productos farmacéuticos de la más alta calidad y brindar un servicio excepcional a nuestros clientes. Con más de [X] años de experiencia en el sector, somos una farmacia comprometida con la salud y el bienestar de nuestra comunidad.
+
+            Contamos con un equipo de profesionales altamente capacitados que se esfuerzan por proporcionar asesoramiento personalizado, garantizando que cada cliente reciba la atención que necesita. Ya sea que busques medicamentos recetados, productos de cuidado personal o suplementos nutricionales, en nuestra farmacia encontrarás lo que necesitas con la confianza de estar comprando en un lugar seguro y confiable.
+
+            Nos enorgullece ofrecer un ambiente cómodo y accesible, donde cada cliente puede sentirse bienvenido y atendido. Además, trabajamos con los mejores proveedores para asegurar que nuestros productos sean de la más alta calidad y estén siempre disponibles.
+
+            En Farmacia [Nombre de la Farmacia], nuestra misión es cuidar de ti y de tu familia, ofreciendo productos de calidad y un servicio amable que te ayude a tomar las mejores decisiones para tu salud.
+
+            ¡Visítanos y permítenos ser parte de tu camino hacia una vida más saludable!</h4>
+        <br>
+        <article>
+            <header><h1 style="text-align: center;">Video de Youtube sobre si tomar paracetamor o ibuprofeno</h1></header>
+            <iframe width="923" height="519" src="https://www.youtube.com/embed/B3lklTZwHW8" title="¿Por qué los DOCTORES usan tanto el PARACETAMOL?| DrPoloGuerrero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
+        <br>
+            <section id="contenido">
+            <h2 style="text-align: center;">Ejemplo de formulario</h2>
+           <form action="#">
+    <label>Nombre: </label><input type="text" name="nombre" placeholder="Ingrese su nombre"><br>
+    <label>Email: </label><input type="email" name="email" placeholder="Ingrese su correo electrónico"><br>
+    <label>Teléfono: </label><input type="tel" name="telefono" placeholder="Ingrese su número de teléfono"><br>
+    <label>Asunto: </label><input type="text" name="asunto" placeholder="Motivo del mensaje"><br>
+    <label>Mensaje: </label><input type="text" name="mensaje" placeholder="Escriba su queja o pregunta"><br>
+    <label>Preferencia de contacto: </label>
+
+    <label>Aceptar términos: </label><input type="checkbox" name="terminos"> Acepto los términos y condiciones<br>
+    <input type="submit" value="Enviar"><br>
+    <input type="reset" value="Borrar"><br>
+</form>
+
+        </section>
+        <footer class="footer-estilizado">
+            <p>&copy; 2025 Farmacia Examen 1. Todos los derechos reservados.</p>
+        </footer>
     </body>
 </html>
